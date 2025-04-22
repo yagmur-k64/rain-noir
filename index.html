@@ -5,26 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
     <!-- navbar -->
-      <div class="navbar">
+      <nav class="navbar">
         <a href="#home"><img src="images/rain logo.png" alt="logo" class="logo"></a>
 
-        <div class="nav-links">
+        <div class="nav-links" id="navLinks">
+            <a href="#home" class="homebtn">Home</a>
             <a href="#news">About me</a>
+
             <div class="dropdown">
             <button class="dropbtn">Projects
                 <i class="fa fa-caret-down"></i>
             </button>
-            <div class="dropdown-content">
-                <a href="#">LOOP</a>
-                <a href="#">Friends with Benefits</a>
-                <a href="#">Development challenges</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Vision Installatie</a>
+                <div class="dropdown-content">
+                    <a href="#">LOOP</a>
+                    <a href="#">Friends with Benefits</a>
+                    <a href="#">Development challenges</a>
+                    <a href="#">Portfolio</a>
+                    <a href="#">Vision Installatie</a>
 
-            </div>
+                </div>
             </div>
             <div class="dropdown">
                 <button class="dropbtn">Learning outcomes
@@ -39,7 +43,11 @@
                 </div>
             </div>
         </div>
-      </div>
+
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </nav>
 
 
 
@@ -48,6 +56,6 @@
     <!-- introduction -->
     <!-- projects -->
     <!-- learning outcomes -->
-
+<script src="nav.js"></script>
 </body>
 </html>

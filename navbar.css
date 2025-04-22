@@ -11,6 +11,7 @@
     background-color: #FCF4E9;
     font-family: Arial;
     padding: 0 20px; /* voeg wat padding links/rechts toe voor ruimte */
+    position: relative;
 }
 
 /* wrapper voor items rechts */
@@ -76,4 +77,71 @@
 /* Logo grootte */
 .navbar .logo{
     max-width: 2.5rem;
+}
+
+.icon{
+    display: none;
+    font-size: 24px;
+    color: black;
+    cursor: pointer;
+}
+
+.homebtn{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        overflow-x: hidden;
+    }
+.navbar .logo{
+    padding: 0.4rem;
+}
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* verborgen buiten scherm */
+        height: 100vh;
+        width: 60%; /* breedte van het menu */
+        background-color: #FCF4E9;
+        flex-direction: column;
+        align-items: flex-end; /* rechts uitlijnen */
+        padding-top: 60px;
+        transition: right 0.3s ease; /* animatie voor inschuiven */
+        z-index: 5;
+    }
+
+    .nav-links a,
+    .nav-links .dropdown {
+        width: 100%;
+        text-align: right;
+        padding: 15px 20px;
+    }
+
+    .icon {
+        display: block;
+        z-index: 6;
+    }
+
+    .nav-links.active {
+        right: 0; /* zichtbaar wanneer actief */
+    }
+
+    .dropdown-content {
+        display: none;
+        position: static;
+        box-shadow: none;
+    }
+
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+
+    .dropdown .dropdown-content {
+        text-align: right;
+    }
+
+    .homebtn{
+        display: block;
+    }
 }
