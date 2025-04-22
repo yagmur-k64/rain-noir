@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex; /* essentieel voor flex-layout */
+    align-items: center; /* verticale uitlijning */
+    justify-content: space-between; /* logo links, links rechts */
+    background-color: #FCF4E9;
+    font-family: Arial;
+    padding: 0 20px; /* voeg wat padding links/rechts toe voor ruimte */
+}
+
+/* wrapper voor items rechts */
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a,
+.nav-links .dropdown {
+    margin-left: 15px; /* ruimte tussen items */
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 14px 16px;
+}
+
+/* Dropdowns zonder float (flexbox gebruikt geen floats!) */
+.dropdown {
+    position: relative; /* nodig voor positioneren van dropdown-content */
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    border: none;
+    background: inherit;
+    font-family: inherit;
+    font-size: 16px;
+    color: black;
+    padding: 14px 16px;
+    cursor: pointer;
+}
+
+/* Dropdown-content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FCF4E9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    color: black;
+    text-align: left;
+}
+
+/* Dropdown link hover-effect */
+.dropdown-content a:hover {
+    background-color: #f1e6d5; /* lichte hoverkleur */
+}
+
+/* Laat dropdown zien bij hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Logo grootte */
+.navbar .logo{
+    max-width: 2.5rem;
+}
