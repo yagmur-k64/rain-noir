@@ -19,3 +19,17 @@ document.querySelectorAll('.dropdown .dropbtn').forEach(button => {
         }
     });
 });
+
+
+
+
+
+
+
+
+document.querySelector('.carousel').addEventListener('wheel', function(e) {
+    if (e.deltaY !== 0) {
+        e.preventDefault();
+        this.scrollLeft += e.deltaY;
+    }
+});

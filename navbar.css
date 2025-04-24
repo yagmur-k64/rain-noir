@@ -1,18 +1,18 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 .navbar {
     display: flex; /* essentieel voor flex-layout */
     align-items: center; /* verticale uitlijning */
     justify-content: space-between; /* logo links, links rechts */
     background-color: #FCF4E9;
-    font-family: Arial;
+    font-family: 'Marcellus', serif;
     padding: 0 20px; /* voeg wat padding links/rechts toe voor ruimte */
     position: relative;
+    box-shadow: 0px -3px 16px rgba(0,0,0,0.2);
+    z-index: 3;
+
 }
+
 
 /* wrapper voor items rechts */
 .nav-links {
@@ -25,13 +25,32 @@
     margin-left: 15px; /* ruimte tussen items */
     text-decoration: none;
     color: black;
-    font-size: 16px;
+    font-size: 18px;
     padding: 14px 16px;
 }
+
+
+  .about {
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    position: relative;
+    display: inline-block;
+    transition: all 0.5s ease-in-out;
+    animation-duration: 0.5s;
+  }
+  
+  .about:hover {
+    scale: 1.1;
+  }
+  
 
 /* Dropdowns zonder float (flexbox gebruikt geen floats!) */
 .dropdown {
     position: relative; /* nodig voor positioneren van dropdown-content */
+    z-index: 4;
 }
 
 /* Dropdown button */
@@ -39,7 +58,7 @@
     border: none;
     background: inherit;
     font-family: inherit;
-    font-size: 16px;
+    font-size: 18px;
     color: black;
     padding: 14px 16px;
     cursor: pointer;
@@ -76,7 +95,14 @@
 
 /* Logo grootte */
 .navbar .logo{
-    max-width: 2.5rem;
+    max-height: 2.3rem;
+    padding: 0 10px;
+    transition: all 0.3s ease-in-out;
+    animation-duration: 0.5s;
+}
+
+.navbar .logo:hover {
+scale: 1.05;
 }
 
 .icon{
@@ -87,7 +113,7 @@
 }
 
 .homebtn{
-    display: none;
+    display: none !important;
 }
 
 @media screen and (max-width: 768px) {
