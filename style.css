@@ -6,6 +6,8 @@ body{
     overflow-x: hidden;
 }
 
+/* -------------------------------------hero------------------------------------- */
+
 
 .hero {
     position: relative;
@@ -58,6 +60,7 @@ body{
 
 
 
+/* --------------------------------------about me------------------------------------- */
 
 
 
@@ -136,6 +139,7 @@ body{
 
 
 
+/* --------------------------------------projects------------------------------------- */
 
 
 
@@ -196,4 +200,177 @@ body{
 
 .pinkStar img{
    width: 55px;
+}
+
+
+
+
+/* --------------------------------------learning outcomes------------------------------------- */
+
+
+
+
+
+.learning-outcomes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 4rem;
+    padding: 5rem 2rem;
+    flex-wrap: wrap;
+    position: relative;
+}
+.outcomes-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding-bottom: 10rem;
+}
+.learning-outcomes h1 {
+    font-size: 8rem;
+    font-weight: 100;
+}
+
+.outcome {
+    width: 220px;
+    height: 220px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.3rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: visible;
+    cursor: pointer;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* standaardtekst (LO1, LO2, etc.) */
+.default-text {
+    transition: opacity 0.3s ease;
+}
+
+/* hover: standaard tekst verdwijnt */
+.outcome:hover .default-text {
+    opacity: 0;
+}
+
+.outcome:hover {
+    background: radial-gradient(circle, #B0C5E0, #FCF4E9);}
+
+/* Hover tekst */
+.outcome::after {
+    content: attr(data-hover);
+    position: absolute;
+    font-size: 1.8rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    padding: 0.5rem;
+}
+
+/* Hover: nieuwe tekst verschijnt */
+.outcome:hover::after {
+    opacity: 1;
+}
+
+/* Stars */
+.star {
+    position: absolute;
+    transition: all 0.5s ease;
+}
+.star img{
+    width: 2.5rem;
+}
+/* Beginpositie sterren */
+.star1 {
+    top: -10px;
+    left: 40%;
+    transform: translateX(-50%);
+    transform: translatey(-25%);
+
+}
+
+.star2 {
+    bottom: -10px;
+    left: 40%;
+    transform: translateX(-10%);
+    transform: translatey(48%);
+}
+
+/* Sterren bewegen bij hover */
+/* .outcome:hover .star1 {
+    top: 10%;
+    left: 10%;
+}
+
+.outcome:hover .star2 {
+    bottom: 10%;
+    right: 10%;
+    left: auto;
+} */
+
+
+/* Eerste outcome (LO1) */
+.outcome:nth-child(1):hover .star1 {
+    top: 10%;
+    left: 20%;
+}
+
+.outcome:nth-child(1):hover .star2 {
+    bottom: 10%;
+    right: 20%;
+    left: auto;
+}
+
+/* Tweede outcome (LO2) */
+.outcome:nth-child(2):hover .star1 {
+    top: 5%;
+    left: 80%;
+}
+
+.outcome:nth-child(2):hover .star2 {
+    bottom: 5%;
+    left: 20%;
+}
+
+/* Derde outcome (LO3) */
+.outcome:nth-child(3):hover .star1 {
+    top: 30%;
+    left: 10%;
+}
+
+.outcome:nth-child(3):hover .star2 {
+    bottom: 30%;
+    right: 10%;
+    left: auto;
+}
+
+/* Vierde outcome (LO4) */
+.outcome:nth-child(4):hover .star1 {
+    top: 15%;
+    left: 70%;
+}
+
+.outcome:nth-child(4):hover .star2 {
+    bottom: 15%;
+    left: 30%;
+}
+
+/* Vijfde outcome (LO5) */
+.outcome:nth-child(5):hover .star1 {
+    top: 25%;
+    left: 25%;
+}
+
+.outcome:nth-child(5):hover .star2 {
+    bottom: 25%;
+    right: 25%;
+    left: auto;
 }
