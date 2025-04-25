@@ -8,18 +8,24 @@ body{
 
 /* -------------------------------------hero------------------------------------- */
 
-
+/* 
 .hero {
     position: relative;
-    align-items: center;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
 }
 
 .hero-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 100vh;
     width: 100vw;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-img {
@@ -38,28 +44,109 @@ body{
     font-family: 'mercellus', serif;
     font-size: 128px;
     font-weight: 100;
+    pointer-events: none;
 }
+ */
 
-.portfolio:nth-of-type(1) {
+
+
+ .hero-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* full screen */
+    overflow: hidden;
+  }
+  
+  .hero-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .portfolio-text{
+    margin-left: 22.5rem;
+  }
+
+  .portfolio-text h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Marcellus', serif;
+    font-size: 128px;
+    font-weight: 100;
+    line-height: 1;
+    z-index: 0;
+    position: relative;
+    
+  }
+  
+  .portfolio-text h1 {
+    margin: 0;
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease forwards;
+  }
+  
+  .portfolio-text .top{
     z-index: 2;
-}
+  }
+  
+  .portfolio-text .bottom{
+    z-index: 0;
+  }
 
-.portfolio:nth-of-type(2) {
-    top: 25%;
-    z-index: -1;
-}
-.portfolio:nth-of-type(3) {
-    top: 50%;
-    z-index: -1;
-}
-.portfolio:nth-of-type(4) {
-    top: 75%;
-    z-index: -1;
-}
+  .hero-img {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 30.5rem;
+    height: auto;
+    filter: blur(2px); /* optional */
+    animation: fadeIn 1s ease 0.5s forwards;
+    opacity: 0; /* Start hidden */
+  }
 
+/* Fade and slide animation */
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.98);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
 
-
-
+  
+  .portfolio-text h1:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  .portfolio-text h1:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  .portfolio-text h1:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  .portfolio-text h1:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+  
+ 
+  
+  
 /* --------------------------------------about me------------------------------------- */
 
 
@@ -89,6 +176,41 @@ body{
     margin-bottom: 5%;
 }
 
+.contact{
+    background-color: #FEE5CF;
+    width: 18rem;
+    padding-left: 3rem;
+    padding-bottom: 3rem;
+}
+
+.info-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .info-item p {
+    margin: 0;
+  }
+
+.info-item i{
+    color: black;
+    font-size: 1.5rem;
+    width: 30px;
+    text-align: center;
+}
+
+.info-item p{
+    margin: 0;
+    text-align: left;
+    flex: 1;
+}
 .intro .text{
     max-width: 400px;
 }
@@ -100,8 +222,27 @@ body{
     border: 1px;
     border-style: solid;
     padding: 10px 20px;
+    font-size: 14px;
+    font-family: 'marcellus', serif;
 }
 
+.age{
+    position: absolute;
+    top: 20%;
+    right: 37.5%;
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+}
+
+.land{
+    position: absolute;
+    top: 45%;
+    right: 11%;
+    width: 9rem;
+    display: flex;
+    justify-content: center;
+}
 
 .learnBTN{
     background-color: #E3C2D3;
@@ -122,8 +263,13 @@ body{
 
 .me{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.my-photo{
+    max-width: 21rem;
 }
 .contact h4{
     font-family: 'marcellus', serif;
@@ -257,13 +403,17 @@ body{
 }
 
 /* hover: standaard tekst verdwijnt */
-.outcome:hover .default-text {
+.outcome:hover .default-text,
+.outcome:active .default-text {
     opacity: 0;
 }
 
 .outcome:hover {
-    background: radial-gradient(circle, #B0C5E0, #FCF4E9);}
-
+    background: radial-gradient(circle, #B0C5E0, #FCF4E9);
+}
+.outcome:active {
+    background: radial-gradient(circle, #B0C5E0, #FCF4E9);
+}
 /* Hover tekst */
 .outcome::after {
     content: attr(data-hover);
@@ -276,7 +426,8 @@ body{
 }
 
 /* Hover: nieuwe tekst verschijnt */
-.outcome:hover::after {
+.outcome:hover::after,
+.outcome:active::after {
     opacity: 1;
 }
 
@@ -318,59 +469,108 @@ body{
 
 
 /* Eerste outcome (LO1) */
-.outcome:nth-child(1):hover .star1 {
+.outcome:nth-child(1):hover .star1,
+.outcome:nth-child(1):active .star1 {
     top: 10%;
     left: 20%;
 }
 
-.outcome:nth-child(1):hover .star2 {
+.outcome:nth-child(1):hover .star2,
+.outcome:nth-child(1):active .star2 {
     bottom: 10%;
     right: 20%;
     left: auto;
 }
 
 /* Tweede outcome (LO2) */
-.outcome:nth-child(2):hover .star1 {
+.outcome:nth-child(2):hover .star1,
+.outcome:nth-child(2):active .star1 {
     top: 5%;
     left: 80%;
 }
 
-.outcome:nth-child(2):hover .star2 {
+.outcome:nth-child(2):hover .star2,
+.outcome:nth-child(2):active .star2 {
     bottom: 5%;
     left: 20%;
 }
 
 /* Derde outcome (LO3) */
-.outcome:nth-child(3):hover .star1 {
+.outcome:nth-child(3):hover .star1,
+.outcome:nth-child(3):active .star1 {
     top: 30%;
     left: 10%;
 }
 
-.outcome:nth-child(3):hover .star2 {
+.outcome:nth-child(3):hover .star2,
+.outcome:nth-child(3):active .star2 {
     bottom: 30%;
     right: 10%;
     left: auto;
 }
 
 /* Vierde outcome (LO4) */
-.outcome:nth-child(4):hover .star1 {
+.outcome:nth-child(4):hover .star1,
+.outcome:nth-child(4):active .star1 {
     top: 15%;
     left: 70%;
 }
 
-.outcome:nth-child(4):hover .star2 {
+.outcome:nth-child(4):hover .star2,
+.outcome:nth-child(4):active .star2 {
     bottom: 15%;
     left: 30%;
 }
 
 /* Vijfde outcome (LO5) */
-.outcome:nth-child(5):hover .star1 {
+.outcome:nth-child(5):hover .star1,
+.outcome:nth-child(5):active .star1 {
     top: 25%;
     left: 25%;
 }
 
-.outcome:nth-child(5):hover .star2 {
+.outcome:nth-child(5):hover .star2,
+.outcome:nth-child(5):active .star2 {
     bottom: 25%;
     right: 25%;
     left: auto;
 }
+
+
+@media (max-width: 768px) {
+    /* Make circles smaller */
+    .outcome {
+      width: 100px;
+      height: 100px;
+      font-size: 1rem;
+      padding: 0.5rem;
+    }
+  
+    /* Make the H1 smaller */
+    .learning-outcomes h1 {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+    }
+  
+    /* Make the outcome hover text (after text) smaller */
+    .outcome::after {
+      font-size: 0.9rem;
+    }
+  
+    /* Make the default text inside circles smaller */
+    .default-text {
+      font-size: 1rem;
+    }
+  
+    /* Make stars smaller */
+    .star img {
+      width: 20px;
+      height: 20px;
+    }
+  
+    /* Space between circles smaller */
+    .outcomes-container {
+      gap: 1.5rem;
+    }
+  }
+  

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="images/rain logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
@@ -57,11 +58,14 @@
 
     <!-- hero -->
      <div class="hero-wrapper">
-        <div class="hero">
-            <h1 class="portfolio">Portfolio</h1>
-            <h1 class="portfolio">Portfolio</h1>
-            <h1 class="portfolio">Portfolio</h1>
-            <h1 class="portfolio">Portfolio</h1>
+        <div class="hero-content">
+            <div class="portfolio-text">
+                <h1 class="top">Portfolio</h1>
+                <h1 class="bottom">Portfolio</h1>
+                <h1 class="bottom">Portfolio</h1>
+                <h1 class="bottom">Portfolio</h1>
+            </div>
+
             <img src="images/hero.jpg" alt="blurred photo" class="hero-img">
         </div>
      </div>
@@ -75,15 +79,30 @@
             <button class="learnBTN">Learn more about me</button>
         </div>
         <div class="me">
-            <img src="images/me.png" alt="me">
-            <p class="age">27th December 2002</p>
-            <p class="land">Turkish</p>
+            <img src="images/me.png" alt="me" class="my-photo">
             <div class="contact">
                 <h4>Contact me!</h4>
-                <p>Helmond, Netherlands</p>
-                <p>yagmur.karabulut@live.nl</p>
-                <p>06 82974023</p>
+                <div class="info-list">
+                    <div class="info-item">
+                        <i class="fa-solid fa-map-pin" ></i> 
+                        <p>Helmond, Netherlands</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope" ></i>
+                        <p>yagmur.karabulut@live.nl</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>06 82974023</p>
+                    </div>
+                </div>
             </div>
+
+
+            <p class="age">27th December 2002</p>
+            <p class="land">Turkish</p>
+
+            
         </div>
     </div>
     <!-- projects -->

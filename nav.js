@@ -26,10 +26,28 @@ document.querySelectorAll('.dropdown .dropbtn').forEach(button => {
 
 
 
-
+// slider for the projects section
 document.querySelector('.carousel').addEventListener('wheel', function(e) {
     if (e.deltaY !== 0) {
         e.preventDefault();
         this.scrollLeft += e.deltaY;
     }
 });
+
+//click function on smaller screens for the Learning outcome section
+document.addEventListener('DOMContentLoaded', function () {
+    const outcomes = document.querySelectorAll('.outcome');
+
+    outcomes.forEach(outcome => {
+      outcome.addEventListener('click', function () {
+        // Als al actief, zet hem uit. Anders alleen deze actief maken
+        if (this.classList.contains('active')) {
+          this.classList.remove('active');
+        } else {
+          // Eerst alle anderen deactiveren
+          outcomes.forEach(o => o.classList.remove('active'));
+          this.classList.add('active');
+        }
+      });
+    });
+  });
