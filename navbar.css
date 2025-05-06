@@ -171,3 +171,21 @@ scale: 1.05;
         display: block;
     }
 }
+
+
+
+
+
+/* navbar */
+
+.footer {
+    display: flex; /* essentieel voor flex-layout */
+    align-items: center; /* verticale uitlijning */
+    text-align: center;
+    justify-content: center;
+    background-color: #FCF4E9;
+    font-family: 'Marcellus', serif;
+    box-shadow: 0px -3px 16px rgba(0,0,0,0.2);
+    z-index: 3;
+
+}
