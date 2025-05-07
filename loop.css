@@ -14,6 +14,7 @@ body {
     gap: 22px;
     padding: 22px;
     justify-content: center;
+    margin-top: 60px
   }
   
   .gallery .item {

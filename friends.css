@@ -14,6 +14,7 @@ body {
     gap: 22px;
     padding: 22px;
     justify-content: center;
+    margin-top: 60px;
   }
   
   .gallery .item {
@@ -140,3 +141,8 @@ body {
     object-fit: cover;
   }
   
+  .side-image1 {
+    width: 450px;
+    height: auto;
+    object-fit: cover;
+  }
