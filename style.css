@@ -318,6 +318,7 @@ body{
     padding-bottom: 1rem;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none;
+    padding-top: 50px;
 }
 .carousel::-webkit-scrollbar {
     display: none; /* Chrome, Safari en Opera */
