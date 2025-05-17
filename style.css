@@ -375,6 +375,12 @@ body{
     gap: 4rem;
     padding-bottom: 10rem;
 }
+
+.outcomes-container a{
+    text-decoration: none;
+    color: black;
+}
+
 .learning-outcomes h1 {
     font-size: 8rem;
     font-weight: 100;
