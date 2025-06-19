@@ -332,8 +332,8 @@ body{
 }
 
 .thumbnail img {
-    width: 400px; /* Pas aan op je stijl */
-    height: auto;
+    width: auto; /* Pas aan op je stijl */
+    height: 270px;
     display: block;
     border-radius: 12px;
     transition: transform 0.3s ease;
