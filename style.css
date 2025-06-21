@@ -6,49 +6,12 @@ body{
     overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 /* -------------------------------------hero------------------------------------- */
-
-/* 
-.hero {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: fit-content;
-    height: fit-content;
-}
-
-.hero-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-img {
-    display: block;
-    width: 30.5rem; 
-    height: auto;
-    position: relative;
-    z-index: 1;
-
-}
-
-.portfolio {
-    position: absolute;
-    transform: translateX(85%);
-    white-space: nowrap;
-    font-family: 'mercellus', serif;
-    font-size: 128px;
-    font-weight: 100;
-    pointer-events: none;
-}
- */
-
-
 
  .hero-wrapper {
     display: flex;

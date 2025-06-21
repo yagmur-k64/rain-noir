@@ -26,7 +26,7 @@ body {
     grid-column: 2;
     grid-row: 2;
     height: 400px; /* adjust as desired */
-    background-image: url('images/mockup_rood.png');
+    background-image: url('images/rick\ box.png');
     background-size: cover;
     background-position: center;
   }
@@ -34,7 +34,7 @@ body {
   .tall {
     grid-column: 1;
     grid-row: 1 / span 2;
-    background-image: url('images/poster_friends.jpg');
+    background-image: url('images/showcase.jpg');
     background-size: cover;
     background-position: center;
   }
@@ -43,7 +43,7 @@ body {
     grid-column: 2;
     grid-row: 1;
     height: 200px; /* adjust height as needed */
-    background-image: url('images/mockup_rood.png');
+    background-image: url('images/app.jpg');
     background-size: cover;
     background-position: center;
   }
@@ -54,7 +54,7 @@ body {
     height: 200px; /* match the 3rd item's height */
     margin-left: auto;
     width: calc(50% - 5px);
-    background-image: url('images/app\ with\ hand\ and\ bg.png');
+    background-image: url('images/2screens.png');
     background-size: cover;
     background-position: center;
   }
